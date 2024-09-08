@@ -4,12 +4,15 @@ body{
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 .nav {
     display: flex;
     justify-content: space-between;
-    /* width: 80%; */
     align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
 }
 .top{
     display: flex;
@@ -17,12 +20,24 @@ body{
     margin: 5px 100px 60px 100px;
 }
 .hero{
-    padding: 50px;
     display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
 }
-.left, .right{
+.left{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.right{
     width: 50%;
 }
+
+
 .offer, .explore{
     color: white;
     display: inline-block;
@@ -46,19 +61,25 @@ body{
     margin-bottom: 10px;
 }
 .bottom-container{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     gap: 30px;
+    width:80%;
+    margin: auto;
+    margin-bottom: 40px;
 }
 .box{
+    width:30%;
     display: flex;
     flex-direction: row;
     font-size: small;
+    gap:20px;
 }
 .feature-right {
-    width: 180px;
-    padding-left: 12px;
+    padding-top: 15px;
 }
+
 .top-words{
     text-align: center;
 }
@@ -104,18 +125,19 @@ body{
     display: flex;
     flex-direction: row;
 }
+
 .ftr{
     background-color: rgb(254, 232, 235);
-    padding: 50px;
-    padding-bottom: 120px;
+    width:100%;
     font-size: medium;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 .inner-footer{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    padding-left: 105px;
-    padding-right: 105px;
+    width: 80%;
+    margin: auto;
 }
 .input-email{
     padding-right:45px;
@@ -123,7 +145,17 @@ body{
     padding-bottom: 5px;
     padding-left:4px;
 }
-.footer-items p{
+.footer-items{
+    width:25%;
+}
+.bheem{
+    width: 50%;
+}
+.footer-items-inner{
+    width:50%;
+}
+
+.footer-items,.footer-items-inner p{
     margin: 5px 0;
     padding: 0;
     font-weight: 300;
@@ -144,3 +176,99 @@ body{
 .top-words h1{
     margin: 30px;
 }
+
+.bheem{
+    display: flex;
+    gap:50px;
+
+}
+
+@media (max-width:600px) {
+    .left img{
+        width:80vw;
+    }
+    .right{
+        width:100%;
+    }
+    .right h1{
+        font-size: 50px;
+    }
+}
+
+@media (max-width:1400px) {
+    .hero{
+        gap:50px;
+    }
+}
+@media (max-width:1280px) {
+    .hero{
+        width:90%;
+        gap:70px;
+    }
+    .inner-footer{
+        width: 90%;
+    }
+}
+
+@media (max-width:1000px) {
+    .hero{
+        flex-direction: column;
+    }
+    .left{
+        width:100%;
+    }
+    .right{
+        width:100%;
+        padding: 0px 40px 0px 40px;
+    }
+    .box{
+        width:100%;
+        flex-direction: column;
+        gap:0px;
+        
+    }
+    .box .feature-right p{
+        display: none;
+    }
+    .ashu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+    .feature-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width:900px) {
+    .inner-footer{
+        flex-direction: column;
+        gap:30px;
+        padding: 0 30px 0 30px;
+
+    }
+    .bheem{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .footer-items{
+        width: 100%;
+    }
+    .footer-items input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .follow{
+        text-align: center;
+    }
+    .footer-icons{
+        width:100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
